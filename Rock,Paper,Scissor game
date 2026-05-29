@@ -1,0 +1,20 @@
+import random
+
+user = input("Enter your choice (rock, paper, scissor): ").lower()
+
+choices = ["rock", "paper", "scissor"]
+comp = random.choice(choices)
+
+print("You =", user)
+print("Computer =", comp)
+
+if user == comp:
+    print("It's a tie!")
+
+elif (user == "rock" and comp == "scissor") or \
+     (user == "paper" and comp == "rock") or \
+     (user == "scissor" and comp == "paper"):
+    print("You won!")
+
+else:
+    print("You lose!")
